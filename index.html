@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - BEZA</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Service</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I'm <span>Bezawit Amogne</span><br>From Bahir Dar</h1>
+        </div>
+    </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="about-col-1">
+                <img src="image/bez.png" alt="Bezawit Amogne">
+            </div>
+
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+
+                <p>
+                    I am a third-year Software Engineering student with a strong passion for web development.
+                    I am learning HTML, CSS, JavaScript, PHP, and modern web technologies.  
+                    My goal is to become a full-stack web developer and build real-world applications.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <!-- Skills -->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span> - HTML, CSS, JavaScript, PHP</li>
+                        <li><span>UI/UX Design</span> - Web & App Interface Design</li>
+                        <li><span>Programming</span> - Java, C++, JavaScript</li>
+                    </ul>
+                </div>
+
+                <!-- Experience -->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024 - Present</span> Web Development at Bahir Dar University (BDU)</li>
+                        <li><span>2023 - 2024</span> Team Project Development</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 - Present</span> 3rd Year Software Engineering Student at BIT / BDU</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>I create responsive websites using HTML, CSS, JS, and PHP.</p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-laptop"></i>
+                <h2>UI/UX Design</h2>
+                <p>I design modern and user-friendly interfaces.</p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-mobile"></i>
+                <h2>App Development</h2>
+                <p>I build simple Android applications.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================= PROJECTS / PORTFOLIO ================= -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+
+        <div class="work-list">
+
+            <div class="work">
+                <img src="image/work-1.png" alt="Calculator Web App">
+                <div class="layer">
+                    <h3>Calculator Web App</h3>
+                    <p>Built using HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="image/work-2.png" alt="Travel Planner Website">
+                <div class="layer">
+                    <h3>Travel Planner Website</h3>
+                    <p>Created using HTML, CSS, JavaScript, and PHP.</p>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="image/work-3.png" alt="Other Projects">
+                <div class="layer">
+                    <h3>Other Projects</h3>
+                    <p>Hotel Website, Portfolio Website, Database System Projects.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div id="contact">
+    <div class="container">
+        <h1 class="sub-title">Contact Me</h1>
+
+        <div class="contact-info">
+            <p><i class="fa-solid fa-envelope"></i> bezawitamogne@gmail.com</p>
+            <p><i class="fa-brands fa-github"></i> github.com/bezawit-tech</p>
+            <p><i class="fa-brands fa-linkedin"></i> LinkedIn: Bezawit Amogne</p>
+            <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/bezi_2123" target="_blank">bezi_2123</a></p>
+        </div>
+
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2025 Bezawit Amogne | Software Engineering Student</p>
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname) {
+    for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+</body>
+</html>
