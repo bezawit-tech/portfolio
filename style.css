@@ -7,7 +7,11 @@
 }
 
 body {
-  background: #080808;
+  background-image: url("image/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #fff;
   line-height: 1.6;
 }
@@ -21,7 +25,7 @@ a {
 #header {
   width: 100%;
   height: 100vh;
-  background-image: url(image/background.png);
+  background-image: url("image/background.png");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -98,14 +102,14 @@ nav ul li a:hover::after {
 
 /* ================= ABOUT IMAGE ================= */
 .about-col-1 img {
-  width: auto;
-  height: auto;
-  max-width: 250px;
-  max-height: 250px;
-  border-radius: 0; /* sharp square corners */
-  display: block;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
-  border: 4px solid #fff;
+  object-position: top; /* ✅ hair visible */
+  border-radius: 50%;    /* circular */
+  display: block;
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
 
 /* ================= ABOUT SECTION ================= */
